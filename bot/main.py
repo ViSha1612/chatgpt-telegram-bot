@@ -18,7 +18,7 @@ def main():
     )
 
     # Check if the required environment variables are set
-    required_values = ['TELEGRAM_BOT_TOKEN', 'OPENAI_API_KEY']
+    required_values = ['5843072528:AAFITELHWTZN4G0hpr5qRoaxoZ2RHjZw1DQ', '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']
     missing_values = [value for value in required_values if os.environ.get(value) is None]
     if len(missing_values) > 0:
         logging.error(f'The following environment values are missing in your .env: {", ".join(missing_values)}')
@@ -28,7 +28,7 @@ def main():
     model = os.environ.get('OPENAI_MODEL', 'gpt-3.5-turbo')
     max_tokens_default = default_max_tokens(model=model)
     openai_config = {
-        'api_key': os.environ['OPENAI_API_KEY'],
+        'api_key': os.environ['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'],
         'show_usage': os.environ.get('SHOW_USAGE', 'false').lower() == 'true',
         'stream': os.environ.get('STREAM', 'true').lower() == 'true',
         'proxy': os.environ.get('PROXY', None),
@@ -56,9 +56,9 @@ def main():
                         'Please use GUEST_BUDGET with BUDGET_PERIOD instead.')
 
     telegram_config = {
-        'token': os.environ['TELEGRAM_BOT_TOKEN'],
-        'admin_user_ids': os.environ.get('ADMIN_USER_IDS', '-'),
-        'allowed_user_ids': os.environ.get('ALLOWED_TELEGRAM_USER_IDS', '*'),
+        'token': os.environ['5843072528:AAFITELHWTZN4G0hpr5qRoaxoZ2RHjZw1DQ'],
+        'admin_user_ids': os.environ.get('@TommyShelby16', '@Soupboy_single'),
+        'allowed_user_ids': os.environ.get('@TommyShelby16', '@Soupboy_single'),
         'enable_quoting': os.environ.get('ENABLE_QUOTING', 'true').lower() == 'true',
         'enable_image_generation': os.environ.get('ENABLE_IMAGE_GENERATION', 'true').lower() == 'true',
         'enable_transcription': os.environ.get('ENABLE_TRANSCRIPTION', 'true').lower() == 'true',
